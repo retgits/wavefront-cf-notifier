@@ -61,9 +61,9 @@ GOOS=linux GOARCH=amd64 go build -o ./dist/wavefront-cf-notifier
 
 Before you can deploy the app, you'll need to update the `template.yaml` file in three places:
 
-* Line 26 should be updated with the ARN of your SNS topic
-* Line 33 should be updated to your correct API endpoint for Wavefront
-* Line 34 should be updated with your Wavefront API token
+* [Line 26](https://github.com/retgits/wavefront-cf-notifier/blob/master/template.yaml#L26) should be updated with the ARN of your SNS topic
+* [Line 33](https://github.com/retgits/wavefront-cf-notifier/blob/master/template.yaml#L33) should be updated to your correct API endpoint for Wavefront
+* [Line 34](https://github.com/retgits/wavefront-cf-notifier/blob/master/template.yaml#L34) should be updated with your Wavefront API token
 
 Once those are configured, you can run
 
