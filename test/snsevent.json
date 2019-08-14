@@ -1,0 +1,22 @@
+{
+    "Records": [
+        {
+            "EventSource": "aws:sns",
+            "EventVersion": "1.0",
+            "EventSubscriptionArn": "arn:aws:sns:us-west-2:123456789012:CloudFormationEvents:ff5557cc-f52e-4274-90c6-7a961d334743",
+            "Sns": {
+                "Type": "Notification",
+                "MessageId": "12345",
+                "TopicArn": "arn:aws:sns:us-west-2:123456789012:CloudFormationEvents",
+                "Subject": "AWS CloudFormation Notification",
+                "Message": "StackId='arn:aws:cloudformation:us-west-2:123456789012:stack/MyStack/b9e8d9b0-be10-11e9-aa8d-0a1528792fcb'\nTimestamp='2019-08-13T21:24:52.887Z'\nEventId='c9fb6200-be10-11e9-9c1a-0621218a9930'\nLogicalResourceId='MyStack'\nNamespace='123456789012'\nPhysicalResourceId='arn:aws:cloudformation:us-west-2:123456789012:stack/MyStack/b9e8d9b0-be10-11e9-aa8d-0a1528792fcb'\nResourceProperties='null'\nResourceStatus='CREATE_COMPLETE'\nResourceStatusReason=''\nResourceType='AWS::CloudFormation::Stack'\nStackName='MyStack'\nClientRequestToken='Console-CreateStack-6b6e28ac-09ab-a7ee-9cf6-20865fb3953b'\n",
+                "Timestamp": "2019-08-13T21:24:52.919Z",
+                "SignatureVersion": "1",
+                "Signature": "",
+                "SigningCertUrl": "",
+                "UnsubscribeUrl": "",
+                "MessageAttributes": {}
+            }
+        }
+    ]
+}

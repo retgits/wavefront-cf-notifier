@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  wavefront-cf-notifier
+  
+  SAM Template for wavefront-cf-notifier
+
+Globals:
+  Function:
+    Timeout: 10
+
+Resources:
+  WavefrontNotifier:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: dist/
+      Handler: wavefront-cf-notifier
+      Runtime: go1.x
+      Policies:
+        - AWSLambdaRole
+        - AmazonSNSRole
+      Events:
+        SNSCFAlerts:
+          Type: SNS
+          Properties:
+            Topic: xxx
+      Tags:
+        version: 0.0.1
+      Description: "wavefront-cf-notifier listens to CloudFormation notifications sent across an SNS topic"
+      MemorySize: 128
+      Environment:
+        Variables:
+          WAVEFRONT_URL: https://try.wavefront.com/api/v2/event
+          WAVEFRONT_TOKEN: xxx
